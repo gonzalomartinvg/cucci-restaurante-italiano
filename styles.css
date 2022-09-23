@@ -1,0 +1,237 @@
+/*Establecer tipografía para modificar los componentes de bootstrap. A los componentes propios, le aplicamos directamente la tipografía a la clase para que después sea más fácil modificarlos*/
+
+.gm-font-type{
+    font-family: 'Karla', sans-serif; /*Colocar la tipografía que queremos*/
+}
+
+/*Establecer colores*/
+
+:root{ /*Establecemos paleta de colores*/
+    --primary-color: #fcf4d0;
+    --primary-color-light: #f1609f;
+    --primary-color-hard: #b10264;
+    --secondary-color: #e0d494;
+    --secondary-color-light: #95ecae;
+    --secondary-color-hard: #009f2b;
+    --accent-color: #d03600;
+    --blanco-1: #ffff;
+    --blanco-2: #f8f5f5;
+    --gris-1: #e6e3e3;
+    --gris-2: #3f3f3f;
+}
+
+/*JUMBOTRON*/
+
+.jumbotron-marca{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 10rem);
+}
+.fondo-jumbotron{
+    width: 100%;
+    height: 30rem;
+    margin: auto;
+    background-image: url(images/fondo-01.svg);
+    background-size: cover;
+    filter: brightness(60%);
+    position: absolute; /*El position absolute permite que otros elementos ocupen el mismo espacio*/
+    z-index: -1; /*Con z-index "-1" lo mandamos para atrás*/
+}
+
+.container-logo{
+    grid-column: 1 / 13;
+    display: grid;
+}
+
+.imagen-logo{
+    width: 32%;
+    justify-self: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.botonera{
+    justify-self: center;
+}
+
+.gm-color-botones-jumbotron{
+    background-color: var(--primary-color);
+    color: var(--gris-2);
+    border: none;
+}
+
+.imagen-producto{
+    width: 25rem;
+    position: relative;
+    top: 6rem;
+    grid-column: 1 / 13;
+    justify-self: center;
+    
+}
+
+/*DESCRIPCIÓN MARCA*/
+
+.descripcion-marca{
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.texto-descripcion-marca{
+    width: 100rem;
+    display: grid;
+
+}
+
+.titulo-marca{
+    font-size: 3rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 900;
+}
+
+.cuerpo-texto-marca{
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.titulo-descuento{
+    font-size: 1.5rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+}
+
+.gm-color-botones-formulario{
+    font-family: 'Karla', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--gris-2);
+    border: none;
+}
+
+.linea-divisoria{
+    width: 0.5rem;
+    height: 20rem;
+    background-color: var(--secondary-color);
+    color: var(--gris-2);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-self: center;
+}
+
+.imagen-descripcion-marca{
+    width: 110rem;
+    height: 38rem;
+    border-radius: 0.5rem;
+    background-image: url(images/cocinando.jpg);
+    background-size: cover;
+    align-self: center;
+}
+
+/*FOOTER*/
+
+.linea-divisoria-footer{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 0.1rem;
+    background-color: var(--gris-1);
+}
+
+.footer-container{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1.5rem);
+
+}
+
+.copyright{
+    justify-self: center;
+}
+
+.contactanos{
+    justify-self: center;
+}
+
+.redes-sociales{
+    font-size: 24px;
+    justify-self: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.bi{
+    color: var(--gris-2);
+}
+
+/*MEDIA QUERY*/
+
+@media (max-width: 1100px){
+     
+    .titulo-marca{
+        font-size: 2.5rem;
+    }
+
+    .imagen-descripcion-marca{
+        
+        height: 44rem;
+    }
+     
+}
+
+@media (max-width: 900px){
+
+    .imagen-logo{
+        width: 25rem;
+    }
+
+    .titulo-marca{
+        font-size: 1.9rem;
+    }
+
+     
+}
+
+@media (max-width: 700px){
+
+    .jumbotron-marca{
+        grid-template-rows: repeat(4, 8rem);
+    }
+
+    .fondo-jumbotron{
+        height: 25rem;
+    }
+
+    .imagen-logo{
+        width: 18rem;
+        margin-bottom: 2rem;
+    }
+
+    .imagen-producto{
+        width: 20rem;
+    }
+
+    .descripcion-marca{
+        flex-wrap: wrap;
+    } 
+
+    .linea-divisoria{
+        width: 100%;
+        height: 0.1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .imagen-descripcion-marca{
+        height: 20rem;
+    }
+
+    .linea-divisoria-footer{
+        width: 100%;
+    }
+
+}
+
